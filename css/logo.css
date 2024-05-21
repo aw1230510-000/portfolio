@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+/*top*/
+#top h1 {
+    font-size: 30px;
+    text-align: left;
+}
+#top h1 a{
+    color: #000;
+}
+#top h1 a:hover{
+    color: #fcbd89;
+}
+h1{
+    text-align: center;
+    margin-bottom: -40px;
+    padding-top: -5px;
+}
+#bana{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+#bana img{
+    width: 550px;
+    height: 550px;
+}
+.bun{
+    display: table;
+    line-height: 2.0;
+    margin-top: 70px;
+    margin-left: 350px;
+}
+@media screen and (max-width:768px) {
+    #bana img{
+    width: 500px;
+    height: 350px;
+    }
+    .bun{
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,210 @@
+@charset 'utf-8';
+
+/*nav*/
+nav {
+    background-color: #ffffffb2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+    padding-top: 50px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    padding-right: 10px;
+    margin-right: 50px;
+    display: inline;
+    font-size: 20px;
+}
+
+nav ul li a{
+    color: #251d1d;
+    text-decoration: none;
+}
+
+/*全体（nav以外）*/
+#all{
+    padding-top: 100px;
+}
+
+/*私について*/
+#me_ab h1{
+    text-align: center;
+}
+#im{
+    display: flex;
+    margin-top: 100px;
+}
+#im img{
+    width: 300px;
+    height: 400px;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+#moji{
+    padding-left: 50px;
+}
+
+/*できること*/
+#can{
+    margin-top: 130px;
+    margin-bottom: 150px;
+}
+#can h1{
+    text-align: center;
+}
+#can_all{
+    display: flex;
+}
+#can_all h2{
+    text-align: center;
+}
+#dezain img{
+    width: 300px;
+    height: 300px;
+    margin-left: 130px;
+}
+#dezain p{
+    margin-left: 50px;
+}
+
+#coad img{
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+    margin-left: 225px;
+}
+#coad p{
+    margin-top: 35px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+.col{
+    border-bottom: solid 2px #08a0a0;
+}
+
+/*footer*/
+footer {
+    background-color: rgba(0, 0, 0, 0.249);
+    width: 1500px;
+    margin-top: 100px;
+}
+
+footer h2 {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+}
+
+footer ul li {
+    padding-right: 10px;
+    font-size: larger;
+}
+footer ul li a{
+    color: #000;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        background-color: #fff;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 10px 40px;
+        /*メニュー内部上下左右余白*/
+        position: fixed;
+        right: -300px;
+        /*メニュー横幅①と合わせる*/
+        top: 0;
+        transition: transform 0.3s linear 0s;
+        /*0.3s は変化するのにかかる時間*/
+        width: 300px;
+        /*メニュー横幅①*/
+        z-index: 1000;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: right;
+    }
+
+    nav ul li {
+        padding-right: 10px;
+        display: inline;
+    }
+
+    /*メニューアイコン部分は疑似要素で*/
+    nav:before {
+        background-color: #fff;
+        /*ボタン部分背景色*/
+        border-radius: 0 0 0 10px;
+        /*左下角丸*/
+        color: #333;
+        /*アイコン（フォント）色*/
+        content: "≡";
+        /*メニューアイコン*/
+        display: block;
+        font-size: 50px;
+        /*アイコン（フォント）サイズ*/
+        height: 50px;
+        line-height: 50px;
+        /*縦位置中央化*/
+        position: absolute;
+        right: 100%;
+        text-align: center;
+        top: 0;
+        width: 50px;
+    }
+
+
+    /*hover 時の処理*/
+    nav:hover {
+        transform: translate(-300px);
+        /*メニュー横幅①と合わせる*/
+    }
+
+    nav:hover~#menu-background {
+        /*#ham-menu:hoverの直後に隣接している要素にCSSを設定する*/
+        opacity: 0.5;
+        /*黒背景部分透過度*/
+        z-index: 999;
+    }
+
+    /*私について*/
+    #im img{
+        width: 200px;
+        height: 300px;
+        margin-left: 15px;
+    }
+
+    /*できること*/
+    #can_all{
+        display: block;
+    }
+    #dezain{
+        margin-top: 100px;
+        margin-left: 20px;
+        width: 550px;
+    }
+    #dezain img{
+        margin-left: 180px;
+    }
+    #coad{
+        margin-top: 100px;
+    }
+    #coad img{
+        margin-left: 200px;
+    }
+}
